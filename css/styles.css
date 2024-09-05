@@ -18,38 +18,38 @@
     --border-radius: 5px;
 }
 
+/* Estilos globales */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     background-image: url('/assets/img/fondo.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    margin: 0;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     font-family: var(--main-font);
-    font-weight: 400;
-    font-style: normal;
+    height: 100vh;
 }
 
+/* Navbar */
 nav {
     width: 100%;
     background-color: var(--secondary-bg-color);
-    position: absolute;
+    position: fixed; 
     top: 0;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     padding: var(--button-padding);
     font-family: var(--nav-font);
-    font-weight: 400;
-    font-style: normal;
+    z-index: 1000; 
 }
 
 nav .logo img {
-    width: var(--nav-logo-width); 
+    width: var(--nav-logo-width);
 }
 
 .menu {
@@ -74,13 +74,59 @@ nav .logo img {
     border-radius: var(--border-radius);
 }
 
+/* Carrusel */
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 100px auto 0; 
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    min-width: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+/* Contenido principal */
 main {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     flex: 1;
-    margin-top: 80px; 
+    margin-top: 80px;
 }
 
 .card-redes {
@@ -120,7 +166,17 @@ main {
 .link-button:hover {
     background-color: var(--hover-color);
 }
+/* notices */
+#publicidad{
+    display: flex;
+    justify-content: center;
+}
+.img-notices{
+    width: 1080px;
+    border: var(--border-radius);
+}
 
+/* Footer */
 footer {
     text-align: center;
     padding: 10px 0;

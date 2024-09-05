@@ -11,8 +11,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Poppins:ital,wght@0,400;0,500;1,500&display=swap" rel="stylesheet">
     <!-- icons -->
     <script src="https://kit.fontawesome.com/a3a735b303.js" crossorigin="anonymous"></script>
+    <!-- js -->
+     <script src="/js/scripts.js"></script>
 </head>
 <body>
+    <!-- nav -->
     <nav>
         <a href="/index.html" class="logo"><img src="/assets/img/logo.webp" alt="logotipo"></a>
         <ul class="menu">
@@ -22,6 +25,23 @@
             <li><a href="/contacto.html">Contacto</a></li>
         </ul>
     </nav>
+    <!-- carrusel -->
+    <div class="carousel">
+        <div class="carousel-container">
+            <div class="slide active"><img src="/assets/img/cerezo1.jpg" alt="Imagen 1"></div>
+            <div class="slide"><img src="/assets/img/cerezo2.jpg" alt="Imagen 2"></div>
+            <div class="slide"><img src="/assets/img/cerezo3.jpg" alt="Imagen 3"></div>
+        </div>
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+    <!--Card de noticias -->
+    <section id="publicidad">
+        <picture >
+            <img class="img-notices"src="/assets/img/love.png" alt="Publicidad destacada">
+        </picture>
+
+    </section>
     
 </body>
 </html>
