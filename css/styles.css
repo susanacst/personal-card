@@ -1,0 +1,129 @@
+:root {
+    /* Colores */
+    --primary-bg-color: #fbd5e5;
+    --secondary-bg-color: rgba(224, 217, 217, 0.7);
+    --accent-color: #eb9ac0;
+    --hover-color: #fbd5e5;
+    --text-color-white: #fff;
+
+    /* Fuentes */
+    --main-font: "Poppins", sans-serif;
+    --nav-font: "Mochiy Pop One", sans-serif;
+
+    /* Dimensiones */
+    --nav-logo-width: 100px;
+    --main-padding: 20px;
+    --button-padding: 10px 20px;
+    --gap: 20px;
+    --border-radius: 5px;
+}
+
+body {
+    background-image: url('/assets/img/fondo.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--main-font);
+    font-weight: 400;
+    font-style: normal;
+}
+
+nav {
+    width: 100%;
+    background-color: var(--secondary-bg-color);
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: var(--button-padding);
+    font-family: var(--nav-font);
+    font-weight: 400;
+    font-style: normal;
+}
+
+nav .logo img {
+    width: var(--nav-logo-width); 
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: var(--gap);
+}
+
+.menu li {
+    display: inline;
+}
+
+.menu a {
+    color: var(--text-color-white);
+    text-decoration: none;
+    padding: var(--button-padding);
+    transition: background-color 0.3s;
+}
+
+.menu a:hover {
+    background-color: var(--accent-color);
+    border-radius: var(--border-radius);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex: 1;
+    margin-top: 80px; 
+}
+
+.card-redes {
+    background-color: var(--primary-bg-color);
+    width: 80%;
+    max-width: 400px;
+    padding: var(--main-padding);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.card-redes .img-perfil-card img {
+    width: 50%;
+    border-radius: 50%;
+}
+
+.contenedor-botones {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin-top: 20px;
+}
+
+.link-button {
+    background-color: var(--accent-color);
+    color: var(--text-color-white);
+    border: none;
+    padding: var(--button-padding);
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.link-button:hover {
+    background-color: var(--hover-color);
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+}
