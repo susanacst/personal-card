@@ -1,185 +1,218 @@
 :root {
-    /* Colores */
-    --primary-bg-color: #fbd5e5;
-    --secondary-bg-color: rgba(224, 217, 217, 0.7);
-    --accent-color: #eb9ac0;
-    --hover-color: #fbd5e5;
-    --text-color-white: #fff;
+    /* Variables de colores globales */
+    --primary-bg-color: #fbd5e5; /* Color de fondo principal */
+    --secondary-bg-color: rgba(224, 217, 217, 0.7); /* Color de fondo secundario */
+    --accent-color: #eb9ac0; /* Color de acento para botones y elementos interactivos */
+    --hover-color: #fbd5e5; /* Color al pasar el cursor por encima de un elemento */
+    --text-color-white: #fff; /* Color de texto blanco */
 
-    /* Fuentes */
-    --main-font: "Poppins", sans-serif;
-    --nav-font: "Mochiy Pop One", sans-serif;
+    /* Variables de fuentes globales */
+    --main-font: "Poppins", sans-serif; /* Fuente principal */
+    --nav-font: "Mochiy Pop One", sans-serif; /* Fuente específica para el menú de navegación */
 
-    /* Dimensiones */
-    --nav-logo-width: 100px;
-    --main-padding: 20px;
-    --button-padding: 10px 20px;
-    --gap: 20px;
-    --border-radius: 5px;
+    /* Dimensiones reutilizables */
+    --nav-logo-width: 100px; /* Ancho del logo de navegación */
+    --main-padding: 20px; /* Relleno general */
+    --button-padding: 10px 20px; /* Relleno dentro de botones */
+    --gap: 20px; /* Espacio entre elementos en el menú */
+    --border-radius: 5px; /* Redondeo de bordes */
 }
 
-/* Estilos globales */
+/* Estilos globales para todos los elementos */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    box-sizing: border-box; /* Incluye padding y border en el tamaño del elemento */
+    margin: 0; /* Elimina márgenes por defecto */
+    padding: 0; /* Elimina padding por defecto */
 }
 
 body {
-    background-image: url('/assets/img/fondo.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    font-family: var(--main-font);
-    height: 100vh;
+    background-image: url('/assets/img/fondo.png'); /* Fondo de la página */
+    background-size: cover; /* Hace que la imagen de fondo cubra toda la pantalla */
+    background-position: center; /* Centra la imagen de fondo */
+    background-repeat: no-repeat; /* Evita que el fondo se repita */
+    font-family: var(--main-font); /* Aplica la fuente principal */
+    height: 100vh; /* La página tendrá al menos la altura total de la ventana */
 }
 
-/* Navbar */
+/* Navbar (barra de navegación) */
 nav {
-    width: 100%;
-    background-color: var(--secondary-bg-color);
-    position: fixed; 
-    top: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: var(--button-padding);
-    font-family: var(--nav-font);
-    z-index: 1000; 
+    width: 100%; /* Ocupa todo el ancho de la página */
+    background-color: var(--secondary-bg-color); /* Color de fondo para la barra */
+    position: fixed; /* Fija la barra en la parte superior de la pantalla */
+    top: 0; /* Coloca la barra justo en la parte superior */
+    display: flex; /* Distribuye los elementos horizontalmente */
+    justify-content: space-between; /* Coloca elementos (logo y menú) a los lados opuestos */
+    align-items: center; /* Alinea verticalmente los elementos en el centro */
+    padding: var(--button-padding); /* Añade espacio alrededor de la barra */
+    font-family: var(--nav-font); /* Usa la fuente específica para el menú */
+    z-index: 1000; /* Asegura que la barra esté siempre encima de otros elementos */
 }
 
 nav .logo img {
-    width: var(--nav-logo-width);
+    width: var(--nav-logo-width); /* Aplica el ancho del logo */
 }
 
+/* Menú de navegación */
 .menu {
-    list-style: none;
-    display: flex;
-    gap: var(--gap);
+    list-style: none; /* Elimina los estilos de lista (viñetas) */
+    display: flex; /* Muestra los elementos del menú horizontalmente */
+    gap: var(--gap); /* Espacio entre los elementos del menú */
 }
 
 .menu li {
-    display: inline;
+    display: inline; /* Hace que los elementos de la lista sean en línea */
 }
 
 .menu a {
-    color: var(--text-color-white);
-    text-decoration: none;
-    padding: var(--button-padding);
-    transition: background-color 0.3s;
+    color: var(--text-color-white); /* Color de texto blanco */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    padding: var(--button-padding); /* Espacio dentro de los enlaces */
+    transition: background-color 0.3s; /* Efecto de transición al cambiar de color de fondo */
 }
 
 .menu a:hover {
-    background-color: var(--accent-color);
-    border-radius: var(--border-radius);
+    background-color: var(--accent-color); /* Cambia el color de fondo al pasar el cursor */
+    border-radius: var(--border-radius); /* Aplica bordes redondeados al pasar el cursor */
 }
 
-/* Carrusel */
+/* Estilos para el carrusel */
 .carousel {
-    position: relative;
-    width: 100%;
-    max-width: 1200px;
-    margin: 100px auto 0; 
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative; /* Posiciona los botones "prev" y "next" en relación a este contenedor */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    max-width: 1200px; /* Máximo ancho del carrusel */
+    margin: 100px auto 0; /* Añade espacio superior e inferior */
+    overflow: hidden; /* Oculta las imágenes que están fuera de la vista */
+    border-radius: 10px; /* Bordes redondeados del carrusel */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave alrededor del carrusel */
 }
 
 .carousel-container {
-    display: flex;
-    transition: transform 0.5s ease;
+    display: flex; /* Coloca las diapositivas en línea */
+    transition: transform 0.5s ease; /* Transición suave al mover las diapositivas */
 }
 
 .slide {
-    min-width: 100%;
+    min-width: 100%; /* Cada diapositiva ocupa todo el ancho del carrusel */
 }
 
 .slide img {
-    width: 100%;
-    height: auto;
+    width: 100%; /* La imagen ocupa todo el ancho de la diapositiva */
+    height: auto; /* Ajusta la altura automáticamente */
 }
 
+/* Botones del carrusel */
 .prev, .next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    z-index: 1;
+    position: absolute; /* Posición fija en el carrusel */
+    top: 50%; /* Centra verticalmente los botones */
+    transform: translateY(-50%); /* Ajusta la posición exacta de los botones */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    color: white; /* Color del texto/blanco */
+    border: none; /* Elimina borde de los botones */
+    padding: 10px; /* Espacio dentro del botón */
+    cursor: pointer; /* Cambia el cursor a "pointer" (mano) */
+    z-index: 1; /* Asegura que los botones estén encima de las diapositivas */
 }
 
 .prev {
-    left: 0;
+    left: 0; /* Posiciona el botón "prev" a la izquierda */
 }
 
 .next {
-    right: 0;
+    right: 0; /* Posiciona el botón "next" a la derecha */
 }
 
 /* Contenido principal */
 main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    flex: 1;
-    margin-top: 80px;
+    display: flex; /* Alinea los elementos horizontalmente */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    align-items: center; /* Centra los elementos verticalmente */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    flex: 1; /* Ocupa el resto del espacio vertical disponible */
+    margin-top: 80px; /* Añade espacio superior */
 }
 
 .card-redes {
-    background-color: var(--primary-bg-color);
-    width: 80%;
-    max-width: 400px;
-    padding: var(--main-padding);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    background-color: var(--primary-bg-color); /* Fondo de la tarjeta */
+    width: 80%; /* La tarjeta ocupará el 80% del ancho disponible */
+    max-width: 400px; /* Máximo ancho de la tarjeta */
+    padding: var(--main-padding); /* Espacio interno de la tarjeta */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave alrededor de la tarjeta */
+    text-align: center; /* Centra el contenido de texto */
 }
 
 .card-redes .img-perfil-card img {
-    width: 50%;
-    border-radius: 50%;
+    width: 50%; /* La imagen ocupa el 50% del ancho de la tarjeta */
+    border-radius: 50%; /* Imagen redondeada (como un círculo) */
 }
 
 .contenedor-botones {
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-    margin-top: 20px;
+    display: flex; /* Alinea los botones verticalmente */
+    flex-direction: column; /* Coloca los botones uno debajo del otro */
+    gap: 1em; /* Espacio entre los botones */
+    margin-top: 20px; /* Añade espacio superior */
 }
 
 .link-button {
-    background-color: var(--accent-color);
-    color: var(--text-color-white);
-    border: none;
-    padding: var(--button-padding);
-    text-align: center;
-    text-decoration: none;
-    font-size: 16px;
-    border-radius: var(--border-radius);
-    cursor: pointer;
-    transition: background-color 0.3s;
+    background-color: var(--accent-color); /* Color de fondo del botón */
+    color: var(--text-color-white); /* Color del texto (blanco) */
+    border: none; /* Elimina borde del botón */
+    padding: var(--button-padding); /* Espacio interno del botón */
+    text-align: center; /* Centra el texto dentro del botón */
+    text-decoration: none; /* Elimina subrayado de enlaces */
+    font-size: 16px; /* Tamaño de la fuente */
+    border-radius: var(--border-radius); /* Bordes redondeados */
+    cursor: pointer; /* Cursor de mano al pasar el ratón */
+    transition: background-color 0.3s; /* Transición suave de color de fondo al pasar el ratón */
 }
 
 .link-button:hover {
-    background-color: var(--hover-color);
-}
-/* notices */
-#publicidad{
-    display: flex;
-    justify-content: center;
-}
-.img-notices{
-    width: 1080px;
-    border: var(--border-radius);
+    background-color: var(--hover-color); /* Cambia el color de fondo al pasar el ratón */
 }
 
-/* Footer */
+/* Sección de publicidad */
+#publicidad {
+    display: flex; /* Centra el contenido horizontalmente */
+    justify-content: center;
+}
+
+.img-notices {
+    width: 1080px; /* Ancho de la imagen de publicidad */
+    border: var(--border-radius); /* Bordes redondeados */
+}
+
+/* Sección de carrusel de tarjetas */
+#cards {
+    display: flex; /* Coloca las tarjetas en línea */
+    gap: 1em; /* Espacio entre las tarjetas */
+    overflow-x: hidden; /* Oculta el scroll horizontal */
+    scroll-behavior: smooth; /* Desplazamiento suave al hacer scroll */
+    padding: 1em; /* Espacio alrededor del contenedor de tarjetas */
+}
+
+.card-presentacion-carrusel {
+    flex: 0 0 calc(100% / 4); /* Cada tarjeta ocupa el 25% del ancho del contenedor */
+    background-color: #f0f0f0; /* Color de fondo de la tarjeta */
+    border-radius: 8px; /* Bordes redondeados */
+    overflow: hidden; /* Oculta contenido que se salga de la tarjeta */
+    text-align: center; /* Centra el contenido de texto */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.card-contenedor-img {
+    width: 100%; /* La imagen ocupa todo el ancho de la tarjeta */
+    height: auto; /* Ajusta la altura automáticamente */
+}
+
+img {
+    width: 100%; /* Las imágenes ocuparán todo el ancho disponible */
+    height: auto; /* Altura automática */
+    object-fit: cover; /* Asegura que la imagen cubra todo sin deformarse */
+}
+
+/* Footer (pie de página) */
 footer {
-    text-align: center;
-    padding: 10px 0;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.1);
+    text-align: center; /* Centra el texto */
+    padding: 10px 0; /* Espacio superior e inferior */
+    width: 100%; /* El pie de página ocupa todo el ancho */
+    background-color: rgba(0, 0, 0, 0.1); /* Fondo semitransparente */
 }

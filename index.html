@@ -10,23 +10,21 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Poppins:ital,wght@0,400;0,500;1,500&display=swap" rel="stylesheet">
     <!-- icons -->
-    <script src="https://kit.fontawesome.com/a3a735b303.js" crossorigin="anonymous"></script>
-    <!-- js -->
-     <script src="/js/scripts.js"></script>
+    <script src="https://kit.fontawesome.com/a3a735b303.js" crossorigin="anonymous" defer></script>
 </head>
 <body>
     <!-- nav -->
     <nav>
-        <a href="/index.html" class="logo"><img src="/assets/img/logo.webp" alt="logotipo"></a>
+        <a href="index.html" class="logo"><img src="assets/img/logo.webp" alt="Logotipo de la página"></a>
         <ul class="menu">
-            <li><a href="/">Inicio</a></li>
-            <li><a href="/lore.html">Lore</a></li>
-            <li><a href="/apoyo.html">Apoyo</a></li>
-            <li><a href="/contacto.html">Contacto</a></li>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="lore.html">Lore</a></li>
+            <li><a href="apoyo.html">Apoyo</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
         </ul>
     </nav>
     <!-- carrusel -->
-    <div class="carousel">
+        <div class="carousel">
         <div class="carousel-container">
             <div class="slide active"><img src="/assets/img/banner1.jpg" alt="Imagen 1"></div>
             <div class="slide"><img src="/assets/img/banner2.jpg" alt="Imagen 2"></div>
@@ -34,14 +32,53 @@
         </div>
         <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
         <button class="next" onclick="moveSlide(1)">&#10095;</button>
-    </div>
+    </div> 
+
     <!--Card de noticias -->
     <section id="publicidad">
-        <picture >
-            <img class="img-notices"src="assets/img/card.jpg" alt="Publicidad destacada">
+        <picture>
+            <img class="img-notices" src="assets/img/card.jpg" alt="Publicidad destacada">
         </picture>
+    </section>
 
+    <!-- Sección de tarjetas carrusel -->
+    <section id="cards-container">
+        <div id="cards">
+            <div class="card-presentacion-carrusel">
+                <picture class="card-contenedor-img">
+                    <img src="assets/img/icon.jpg" alt="Imagen 1 de la card">
+                </picture>
+            </div>
+            <div class="card-presentacion-carrusel">
+                <picture class="card-contenedor-img">
+                    <img src="assets/img/icon.jpg" alt="Imagen 2 de la card">
+                </picture>
+            </div>
+            <div class="card-presentacion-carrusel">
+                <picture class="card-contenedor-img">
+                    <img src="assets/img/icon.jpg" alt="Imagen 3 de la card">
+                </picture>
+            </div>
+            <div class="card-presentacion-carrusel">
+                <picture class="card-contenedor-img">
+                    <img src="assets/img/icon.jpg" alt="Imagen 4 de la card">
+                </picture>
+            </div>
+            <!-- Duplicación de tarjetas -->
+            <div class="card-presentacion-carrusel">
+                <picture class="card-contenedor-img">
+                    <img src="assets/img/icon.jpg" alt="Imagen duplicada 1 de la card">
+                </picture>
+            </div>
+            <div class="card-presentacion-carrusel">
+                <picture class="card-contenedor-img">
+                    <img src="assets/img/icon.jpg" alt="Imagen duplicada 2 de la card">
+                </picture>
+            </div>
+        </div>
     </section>
     
+
+    <script src="js/scripts.js"></script>
 </body>
 </html>
