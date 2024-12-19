@@ -129,10 +129,12 @@ main {
     width: 100%; /* Ocupa todo el ancho disponible */
     flex: 1; /* Ocupa el resto del espacio vertical disponible */
     margin-top: 80px; /* Añade espacio superior */
+    padding-bottom: 1em;
 }
 
 .card-redes {
-    background-color: var(--primary-bg-color); /* Fondo de la tarjeta */
+    /* background-color: var(--secundary-bg-color);  */
+    /* Fondo de la tarjeta */
     width: 80%; /* La tarjeta ocupará el 80% del ancho disponible */
     max-width: 400px; /* Máximo ancho de la tarjeta */
     padding: var(--main-padding); /* Espacio interno de la tarjeta */
